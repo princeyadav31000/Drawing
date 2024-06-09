@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing App | Josue Fischer</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="assets/favicon.png" rel="icon">
+    <link href="assets/favicon.png" rel="apple-touch-icon">
+
+    <meta name="description" content="Draw different shapes like rectangles, circles, and triangles in any color, erase or download your drawing as an image and many more options.">
+    <meta name="keywords" content="Draw, App, Drawing App, HTML, CSS, JavaScript">
+    <meta name="translation" content="translate">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta property="og:site_name" content="Drawing App | Josue Fischer"/>
+    <meta property="og:site" content="https://iamjosuefischer.github.io/drawing-app/"/>
+    <meta property="og:title" content="Drawing App | Josue Fischer"/>
+    <meta property="og:description" content="Draw different shapes like rectangles, circles, and triangles in any color, erase or download your drawing as an image and many more options."/>
+    <meta property="og:image" content="assets/favicon.png"/>
+    <meta property="og:url" content="https://iamjosuefischer.github.io/drawing-app/"/>
+    <meta property="og:type" content="website"/>
+
+    <meta name="theme-color" content="#4A98F7"> 
+    <meta name="msapplication-navbutton-color" content="#4A98F7"> 
+    <meta name="apple-mobile-web-app-status-bar-style" content="#4A98F7">
+
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <section class="tools-board">
+        <div class="row">
+          <label class="title">Shapes</label>
+          <ul class="options">
+            <li class="option tool" id="rectangle">
+              <img src="assets/rectangle.svg" alt="Rectangle">
+              <span>Rectangle</span>
+            </li>
+            <li class="option tool" id="circle">
+              <img src="assets/circle.svg" alt="Circle">
+              <span>Circle</span>
+            </li>
+            <li class="option tool" id="triangle">
+              <img src="assets/triangle.svg" alt="Triangle">
+              <span>Triangle</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="row">
+          <label class="title">Options</label>
+          <ul class="options">
+            <li class="option active tool" id="brush">
+              <img src="assets/brush.svg" alt="Brush">
+              <span>Brush</span>
+            </li>
+            <li class="option tool" id="eraser">
+              <img src="assets/eraser.svg" alt="Eraser">
+              <span>Eraser</span>
+            </li>
+            <li class="option">
+              <input type="range" id="size-slider" min="1" max="30" value="5">
+            </li>
+            <li class="option">
+              <input type="checkbox" id="fill-color">
+              <label for="fill-color">Fill color</label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="row colors">
+          <label class="title">Colors</label>
+          <ul class="options">
+            <li class="option"></li>
+            <li class="option selected"></li>
+            <li class="option"></li>
+            <li class="option"></li>
+            <li class="option">
+              <input type="color" id="color-picker" value="#4A98F7">
+            </li>
+          </ul>
+        </div>
+
+        <div class="row buttons">
+          <button class="clear-canvas">Clear Canvas</button>
+          <button class="save-img">Save As Image</button>
+        </div>
+
+      </section>
+      <section class="drawing-board">
+        <canvas></canvas>
+      </section>
+
+    </div>    
+  </body>
+</html>
